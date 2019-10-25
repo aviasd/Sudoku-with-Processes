@@ -54,5 +54,4 @@ typedef struct {
 2) boardReady - a boolean that tells the child processes they can read the board from the memory
 3) result - the answers of the child processes
 4) resultReady - a boolean that tells the main process it can read the results from the memory
-5) noMoreBoards - a boolean that tells the child processes that there are no more boards.
-
+5) noMoreBoards - a boolean that tells the child processes that there are no more boards
