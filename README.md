@@ -40,7 +40,7 @@ The main process communicates with the children using shared memory for it and i
 The main process uses the *mmap* system call to create the shared memory area.  
 The call to *mmap* is done before the calls to *fork*, so that the child procceses inherit the mapping (Because calling to execve cancels the sharing created when calling *mmap*, we didn't use *execve* system call).
 
-The shared memory area contains the data structure:
+The shared memory area contains this data structure:
 ```
 typedef struct {
 	int board[81];
@@ -50,5 +50,9 @@ typedef struct {
 	bool noMoreBoards;
 } sudoku_t;
 ```
-
+1) board - the solution to the Sudoku we need to check
+2) boardReady - a boolean that tells the child processes they can read the board from the memory
+3) result - the answers of the child processes
+4) resultReady - a boolean that tells the main process it can read the results from the memory
+5) noMoreBoards - a boolean that tells the child processes that there are no more boards.
 
