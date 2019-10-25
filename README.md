@@ -7,7 +7,7 @@ This type of puzzle has a 9-row and 9-column matrix when some entries have digit
 2) Each of the columns will display all digits between 1 and 9
 3) Each of the nine *3x3* "sub-matrices" will display all digits between 1 and 9
 
-### Checker Input
+### Checker Interface
 The program reads from an input file (one or more), a digits matrix (one matrix per file) and checks for each matrix if it is a valid Sudoku puzzle solution. If the matrix is a valid solution, then the program prints the message "FILENAME is legal" to standard output. If the matrix is not a valid solution, he program prints the message "FILENAME is not legal" (where FILENAME is the file name in which the matrix was saved).  
 The input file names will be passed to the program as a command line argument (in argv). If there is no command line argument then the program reads a single matrix from the standard input.  
 Input file contains 81 digits separated by white space (spaces, newlines or tabs). Input appears as the first row digits (from left to right), followed by the second row digits and so on to ninth row digits.
